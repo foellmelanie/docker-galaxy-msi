@@ -4,11 +4,15 @@ galaxy_instance: http://localhost:8080
 install_resolver_dependencies: True
 install_tool_dependencies: False
 tools:
-  - name: landmark_registration
-    owner: imgteam
+  - name: add_input_name_as_column
+    owner: mvdbeek
     tool_panel_section_label: "Imaging"
 
-  - name: 2d_auto_threshold
+  - name: graphicsmagick_image_convert
+    owner: bgruening
+    tool_panel_section_label: "Imaging"
+
+  - name: landmark_registration
     owner: imgteam
     tool_panel_section_label: "Imaging"
 
@@ -16,63 +20,7 @@ tools:
     owner: imgteam
     tool_panel_section_label: "Imaging"
 
-  - name: 2d_feature_extraction
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: 2d_simple_filter
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: anisotropic_diffusion
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: binary2labelimage
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: binaryimage2points
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: colocalization_viz
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: color_deconvolution
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: concat_channels
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
   - name: coordinates_of_roi
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: count_objects
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: curl_post
-    owner: imgteam
-    tool_panel_section_label: "Send Data"
-
-  - name: detection_viz
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: labelimage2points
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: mahotas_features
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: mergeneighboursinlabelimage
     owner: imgteam
     tool_panel_section_label: "Imaging"
 
@@ -81,22 +29,6 @@ tools:
     tool_panel_section_label: "Imaging"
 
   - name: overlay_segmentation_mask
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: permutate_axis
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: points2binaryimage
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: points2labelimage
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: projective_transformation
     owner: imgteam
     tool_panel_section_label: "Imaging"
 
@@ -112,59 +44,150 @@ tools:
     owner: imgteam
     tool_panel_section_label: "Imaging"
 
-  - name: split_labelmap
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: visceral_evaluatesegmentation
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
-  - name: wsi_extract_top_view
-    owner: imgteam
-    tool_panel_section_label: "Imaging"
-
   - name: maldi_quant_preprocessing
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: maldi_quant_peak_detection
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_filtering
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_segmentations
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_data_exporter
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_classification
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_mz_images
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_quality_report
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_preprocessing
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_spectra_plots
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
   - name: cardinal_combine
     owner: galaxyp
-    tool_panel_section_label: Proteomics
+    tool_panel_section_label: "Mass spectrometry imaging"
 
+  - name: join_files_on_column_fuzzy
+    owner: bgruening
+    tool_panel_section_label: Text Manipulation
+
+  - name: xpath
+    owner: iuc
+    tool_panel_section_label: "Filter and Sort"
+
+  - name: text_processing
+    owner: bgruening
+    tool_panel_section_label: "Text Manipulation"
+
+  - name: split_file_on_column
+    owner: bgruening
+    tool_panel_section_label: "Collection Operations"
+
+  - name: datamash_ops
+    owner: iuc
+    tool_panel_section_label: "Join, Subtract and Group"
+
+  - name: datamash_transpose
+    owner: iuc
+    tool_panel_section_label: "Join, Subtract and Group"
+
+  - name: biosigner
+    owner: ethevenot
+    tool_panel_section_label: "Statistics"
+
+  - name: univariate
+    owner: ethevenot
+    tool_panel_section_label: "Statistics"
+
+  - name: multivariate
+    owner: ethevenot
+    tool_panel_section_label: "Statistics"
+
+  - name: heatmap
+    owner: ethevenot
+    tool_panel_section_label: "Statistics"
+
+  - name: lipidmaps_textsearch
+    owner: fgiacomoni
+    tool_panel_section_label: "Metabolomics"
+
+  - name: checkformat
+    owner: ethevenot
+    tool_panel_section_label: "Metabolomics"
+
+  - name: dbbuilder
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_decoydatabase
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_msgfplusadapter
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_xtandemadapter
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_idposteriorerrorprobability
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_peptideindexer
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_falsediscoveryrate
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_fileinfo
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name:  openms_idscoreswitcher
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_fidoadapter
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_idfilter
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_textexporter
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: openms_fidoadapter
+    owner: galaxyp
+    tool_panel_section_label: "Proteomics"
+
+  - name: column_maker
+    owner: devteam
+    tool_panel_section_label: "Text Manipulation"
